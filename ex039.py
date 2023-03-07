@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+'''from datetime import datetime, timedelta
 sex = str(input("Informe seu sexo (F, para feminino / M, para masculino): "))
 
 if sex == "M":
@@ -55,8 +55,9 @@ elif sex == "F":
           "Militar Obrigatório até 30 de junho.")
 else:
     print("Digite F, para feminino ou M, para masculino!")
-
 '''
+
+
 from datetime import date
 sex = str(input("Informe seu sexo (F, para feminino / M, para masculino): "))
 
@@ -86,4 +87,3 @@ elif sex == "F":
           "Militar Obrigatório até 30 de junho.")
 else:
     print("Digite F, para feminino ou M, para masculino!")
-'''

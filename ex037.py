@@ -1,24 +1,24 @@
 num = int(input("Digite um número inteiro: "))
 base_conversão = int(input("Digite '1' para binário, '2' para octal e '3' para hexadecimal: "))
 if base_conversão == 1:
-    convertido = bin(num).lstrip('0b')
+    convertido = bin(num)
     base = "binário"
 elif base_conversão == 2:
-    convertido = oct(num).lstrip('0o')
+    convertido = oct(num)
     base = "octal"
 elif base_conversão == 3:
-    convertido = hex(num).lstrip('0x')
+    convertido = hex(num)
     base = "hexadecimal"
 else:
     print("Digite '1' para binário, '2' para octal e '3' para hexadecimal!")
-print(f"O número inteiro {num} corresponde ao {base} {convertido}.")
+print(f"O número inteiro {num} corresponde ao {base} {convertido[2:]}.")
 
-
+'''
 # Na resolução abaixo uso conceitos de looping while e for que ainda não foram trabalhados no Curso em Vídeo até a
 # aula 12. Resolvi da maneira abaixo com o auxílio do ChatGPT. Mas não obtive esse código como está abaixo de uma só
-# vez, em uma resposta. Fui perguntando como fazer coisas que eu queria fazer no código e fui juntando tudo.
+# vez, em uma resposta. Fui perguntando como fazer as partes que eu queria fazer no código e fui juntando tudo em um código só.
 
-'''num = int(input("Digite um número inteiro: "))
+num = int(input("Digite um número inteiro: "))
 inteiro = num
 base_conversão = int(input("Digite '1' para binário, '2' para octal ou '3' para hexadecimal: "))
 
@@ -32,7 +32,8 @@ if base_conversão == 1:
         inteiro = inteiro // divisor
     restos.append(inteiro)
     restos_invertido = list(reversed(restos))
-    convertido = int(''.join(map(str, restos_invertido)))
+    convertido = ''.join(str(i) for i in restos_invertido)
+    #convertido = int(''.join(map(str, restos_invertido)))
     base = "binário"
 
 elif base_conversão == 2:
@@ -45,7 +46,8 @@ elif base_conversão == 2:
         inteiro = inteiro // divisor
     restos.append(inteiro)
     restos_invertido = list(reversed(restos))
-    convertido = int(''.join(map(str, restos_invertido)))
+    convertido = ''.join(str(i) for i in restos_invertido)
+    #convertido = int(''.join(map(str, restos_invertido)))
     base = "octal"
 
 elif base_conversão == 3:
@@ -70,4 +72,7 @@ elif base_conversão == 3:
 
 else:
     print("Digite '1' para binário, '2' para octal ou '3' para hexadecimal!")
-print(f"O número inteiro {num} corresponde ao {base} {convertido}.")'''
+print(f"O número inteiro {num} corresponde ao {base} {convertido}.")
+
+print(type(convertido))
+'''
