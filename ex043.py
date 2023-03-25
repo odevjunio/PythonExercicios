@@ -3,14 +3,14 @@ altura = float(input("Altura: "))
 imc = peso / altura ** 2
 
 if imc < 18.5:
-    condição = "abaixo do peso"
+    condição = "Cuidado! Você está abaixo do peso."
 elif imc < 25:
-    condição = "com peso ideal"
+    condição = "Ótimo! Você está com peso ideal."
 elif imc < 30:
-    condição = "com sobrepeso"
+    condição = "Você está com sobrepeso."
 elif imc < 40:
-    condição = "em um quadro de obesidade"
+    condição = "Cuidado! Você está em um quadro de obesidade."
 else:
-    condição = "em um quadro de obesidade mórbida"
+    condição = "ATENÇÃO! Você está em um quadro de obesidade mórbida. Procure um médico."
 
-print(f"Você está {condição}.")
+print(f"Seu IMC está igual a {imc:.1f}. {condição}")

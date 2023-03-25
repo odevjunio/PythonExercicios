@@ -10,9 +10,9 @@ elif age <= 14:
     categoria = "Até 14 anos: INFANTIL"
 elif age <= 19:
     categoria = "Até 19 anos: JUNIOR"
-elif age <= 20:
-    categoria = "Até 20 anos: SÊNIOR"
+elif age <= 25:
+    categoria = "Até 25 anos: SÊNIOR"
 else:
-    categoria = "Acima de 20 anos: MASTER"
+    categoria = "Acima de 25 anos: MASTER"
 
 print(categoria)
